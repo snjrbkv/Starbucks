@@ -1,0 +1,80 @@
+.product-in{
+    padding: 50px 0px;
+    @include flexes(flex-start, flex-start, column)
+}
+.product-in__text{
+    @include flexes(center, flex-start, row);
+}
+    .product-in__title{
+        @include font(60px, 800, $color-white, 60px);
+        flex: 1;
+    }
+    .product-in__title-colored{
+        color: $color-dark-green;     
+    }
+.product-in__info{
+    @include font(20px, 400, $color-text-gray, 30px);
+    flex: 1
+}
+.coffee-in__card{
+    @include flexes(space-between,center,row);
+    overflow-x: scroll;
+    .coffee-in__cards{
+        width: 250px;
+        height: 600px;
+        padding: 20px;
+        border-radius: 50px;
+        border: 1px solid $color-grey;
+        flex-shrink: 0;
+        margin: 10px;
+        @include flexes(space-evenly, center, column);
+    }
+.coffee-in__card-button{
+    padding: 15px 30px;
+    background-color: $color-dark-green;
+    border-radius: 20px;
+    color:$color-white;
+}
+.coffee-in__card-title{
+    @include font(30px, 800, $color-white, 30px)
+}
+.coffee-in__card-info{
+    @include font(20px, 400, $color-text-gray, 30px);
+    text-align: center
+}
+.coffee-in__card-box{
+    @include flexes(center, center, row);
+    padding-top: 20px;
+    position: relative;
+}
+    .coffee-in__card-cave{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: $color-dark-green;
+}
+    .coffee-in__card-img{
+        position: absolute;
+        margin-bottom: 50px;
+    }
+    .coffee-in__card-price{
+    @include font(30px, 500, $color-white, 30px)
+    }
+    .coffee-in__card-ml{
+        @include font(20px, 400, $color-text-gray, 30px)
+    }
+}
+@media only screen and (max-width: 1000px){
+    .product-in__text{
+        @include flexes(center, center, column);
+        .product-in__info{
+            margin-top: 50px;
+        }
+        .product-in__title{
+            font-size: 35px;
+        }
+        .product-in__info{
+            font-size: 15px;
+        }
+    }
+}

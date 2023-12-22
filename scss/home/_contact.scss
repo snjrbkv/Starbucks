@@ -1,0 +1,52 @@
+.contact-in {
+  @include flexes(center, center, row);
+  padding: 50px 0px;
+}
+.contact-in__left {
+  @include flexes(center, center, row);
+  margin-right: 50px;
+  .contact-in__left-img {
+    width: 80%;
+    height: 80%;
+  }
+  flex: 1;
+}
+.contact-in__right {
+  @include flexes(space-between, flex-start, column);
+  flex: 1;
+}
+.contact-in__title {
+  @include font(60px, 800, $color-white, 60px);
+  .contact-in__title-colored {
+    color: $color-green;
+  }
+}
+.contact-in__info {
+  @include font(20px, 400, $color-text-gray, 30px);
+  margin: 50px 0px;
+}
+.contact-in__card-box {
+  margin: 10px 0px;
+  @include flexes(flex-start, center, row);
+  color: $color-white;
+  img {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contact-in__info {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .contact-in {
+    flex-direction: column;
+  }
+  .contact-in__left {
+    margin-right: 0px;
+    margin-top: 50px;
+  }
+  .contact-in__title {
+    @include font(35px, 800, $color-white, 60px);
+  }
+}

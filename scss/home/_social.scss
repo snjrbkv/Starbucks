@@ -1,0 +1,93 @@
+.event-in {
+  padding: 50px 0px;
+  @include flexes(center, center, column);
+}
+.event-in__text {
+  @include flexes(flex-end, center, row);
+}
+.event-in__title {
+  @include font(60px, 800, $color-white, 60px);
+  .event-in__title-colored {
+    color: $color-green;
+  }
+  flex: 1;
+}
+.event-in__info {
+  @include font(20px, 400, $color-text-gray, 30px);
+  flex: 1;
+  margin: 0px 50px;
+}
+.social-in {
+  @include flexes(center, flex-start, column);
+  margin-top: 30px;
+  overflow-x: scroll;
+  .social-in__button {
+    padding: 10px 25px;
+    background-color: $color-green;
+    color: $color-white;
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+  }
+  .social-in__title {
+    @include font(25px, 500, $color-white, 30px);
+  }
+  .social-in__card-top {
+    @include flexes(center, center, row);
+    .social-in__card {
+      width: 650px;
+      height: 250px;
+      margin: 10px;
+      border-radius: 30px;
+      @include flexes(flex-start, flex-start, column);
+      padding: 30px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .social-in__card-bottom {
+    @include flexes(center, center, row);
+    .social-in__card {
+      width: 425px;
+      height: 250px;
+      margin: 10px;
+      border-radius: 30px;
+      @include flexes(flex-start, flex-start, column);
+      padding: 30px;
+      flex-shrink: 0;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  .social-in__coffee-card {
+    background: url("../images/starbucks.png");
+  }
+  .social-in__kitchen-tour {
+    background: url("../images/starbucks-office.png");
+  }
+  .social-in__free-coffee {
+    background: url("../images/starbucks-case.png");
+  }
+  .social-in__our-intagram {
+    background: url("../../images/starbucks-sofa.png");
+  }
+  .social-in__choose-us {
+    background: url("../images/starbucks-ofit.png");
+  }
+}
+@media only screen and (max-width: 500px) {
+  .event-in__info {
+    font-size: 15px;
+    margin: 0px 0px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .event-in__text {
+    flex-direction: column-reverse;
+    .event-in__title {
+      margin-bottom: 50px;
+      font-size: 35px;
+    }
+  }
+}

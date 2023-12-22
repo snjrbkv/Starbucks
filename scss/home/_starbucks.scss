@@ -1,0 +1,97 @@
+.starbucks-in{
+    padding: 50px 0px;
+    @include flexes(space-between, center, row);
+}
+.starbucks-in__left{
+    @include flexes(space-between, flex-start, column);
+    flex: 1;
+    margin-right: 50px;
+}
+.starbucks-in__right{
+    @include flexes(center, center, row);
+    flex: 1;
+    .starbucks-in__right-hero-img{
+        width: 70%;
+        height: 70%;
+    }
+}
+.starbucks-in__title{
+    @include font(60px, 800, $color-white, 85px);
+    .starbucks-in__title-colored{
+        color: $color-dark-green;
+    }
+}
+.starbucks-in__info{
+    @include font(20px, 400, $color-text-gray, 32px);
+    margin: 50px 0px;
+}
+.starbucks-in__button-menu{
+    .starbucks-in__button-default{
+        border-radius: 82px;
+        padding: 11px 50px;
+        background: linear-gradient(265.23deg, $color-green 6.79%, $color-dark-green 97.2%);
+        @include font(20px, 639, $color-white, 35px);
+    }
+    .starbucks-in__button-border{
+        border-radius: 82px;
+        padding: 10px 50px;
+        background: none;
+        border: 1px solid $color-text-gray;
+        @include font(20px, 639, $color-white, 35px);       
+    }
+}
+.starbucks-in__populary{
+    @include flexes(space-between, center, row);
+    margin-top: 50px;
+    .starbucks-in__popular-rating{
+        @include font(40px, 400, $color-white, 35px)
+    }
+    .starbucks-in__popular-info{
+        @include font(16px, 400, $color-text-gray, 20px)
+    }
+}
+.starbucks-in__popular-card:nth-child(2){
+    margin: 0 50px;
+}
+.starbucks-in__popular-plus{
+    color: $color-green;
+}
+@media only screen and (max-width: 900px){
+    .starbucks-in{
+        flex-direction: column;
+    }
+    .starbucks-in__left{
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .starbucks-in{
+        flex-direction: column;
+    }
+    .starbucks-in__left{
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+    .starbucks-in__title{
+        @include font(35px, 800, $color-white, 60px);
+    }
+    .starbucks-in__info{
+        font-size: 15px;
+    }
+    .starbucks-in__button-menu{
+        .starbucks-in__button-default{
+            margin-bottom: 30px;
+        }
+    }
+    .starbucks-in__populary{
+        @include flexes(space-between, center, column);
+        .starbucks-in__popular-card{
+            margin: 50px 0px;
+            display: flex;
+        }
+        .starbucks-in__popular-rating{
+            margin-right: 50px;
+        }
+    }
+}

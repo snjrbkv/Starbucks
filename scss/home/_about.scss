@@ -1,0 +1,33 @@
+.about-in{
+    background-color: $color-white;
+    margin: 50px 5%;
+    padding: 50px;
+    @include flexes(space-between, center, row);
+    border-radius: 50px;
+}
+.about-in__card{
+    @include flexes(space-between, center, column);
+    text-align: center;
+    .about-in__card-title{
+        @include font(32px, 500, $color-darker, 50px);
+        margin: 20px 0px;
+    }
+    .about-in__card-info{
+        @include font(20px, 400, $color-darker, 30px);
+    }
+}
+.about-in__card-box{
+    width: 150px;
+    height: 150px;
+    background-color: $color-dark-green;
+    border-radius: 50%;
+    @include flexes(center, center, column);
+}
+@media only screen and (max-width: 1000px){
+    .about-in{
+        @include flexes(space-around, center, column);
+    }
+    .about-in__card{
+        margin: 50px 0px;
+    }
+}

@@ -1,0 +1,39 @@
+footer{
+    background-color: $color-blaked;
+}
+.footer-in{
+    padding: 50px 0px;
+    @include flexes(center, center, column);
+}
+.footer-in__top-card{
+    @include flexes(space-between, flex-start, row);
+    flex-wrap: wrap;
+    width: 100%;
+    .footer-in__card{
+        flex: 1;
+        margin: 20px;
+    }
+        .footer-in__title{
+            @include font(20px, 400, $color-white, 20px)
+        }
+        .footer-in__info{
+            @include font(20px, 400, $color-text-gray, 20px);
+            margin: 5px 0px
+        }
+    }
+.footer-in__bottom-card{
+    @include flexes(space-between, center, row);
+    width: 100%;
+    .footer-in__number{
+        @include font(25px, 800, $color-green, 20px)
+    }
+    margin-top: 20px;
+}
+@media only screen and (max-width: 1000px){
+    .footer-in__bottom-card{
+        flex-direction: column;
+        .footer-in__number{
+            margin-bottom: 20px;
+        }
+    }
+}
